@@ -1,0 +1,21 @@
+
+<ion-view view-title="New Scorecard">
+  <ion-content class="padding">
+    <form class="" name="courseInfo" ng-submit="" novalidate>
+      <div class="list">
+        <label class="item item-input">
+          <input type="text" name="courseName" placeholder="Course name" ng-model="newScorecard.courseName" required>
+        </label>
+        <label class="item item-input">
+          <input type="number" name="holes" placeholder="number of holes" required>
+        </label>
+        <label class="item item-input">
+          <input type="number" name="playerNumber" placeholder="number of players" required>
+        </label>
+        <div class="padding">
+          <button type="submit" class="button button-block button-positive" ng-disabled="courseInfo.$invalid" >Next</button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

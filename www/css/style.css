@@ -7,3 +7,9 @@
 .bar{
   position:relative;
 }
+.item-input{
+  margin-bottom: 10px;
+}
+.error{
+  color:red;
+}
