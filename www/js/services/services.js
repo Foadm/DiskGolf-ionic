@@ -1,8 +1,16 @@
 angular.module('starter')
-  .factory('newScorecard', function(){
+  .factory('newScorecardSrv', function(){
     var scoreCardModel = {
-      courseSetup : {},
-      playersSetup : {}
+      courseSetup : {
+        courseName : '',
+        NumberOfHoles : 0,
+        NumberOfPlayers : 0
+      },
+      playersSetup : {
+        playerName : ''
+      }
+    };
+    return {
+      scoreCardModel : scoreCardModel
     }
-
   });
