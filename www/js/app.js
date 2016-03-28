@@ -44,8 +44,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('scoreCard.courseSetup',{
       url: '/course-setup',
       templateUrl: 'js/newScorecard/course/courseTpl.html',
-      controller : 'newScorecardCtrl',
-      controllerAs : 'newScorecard'
+      controller : 'courseCtrl',
+      controllerAs : 'course'
+    })
+    .state('scoreCard.playerSetup', {
+      url : '/player-setup',
+      templateUrl : 'js/newScorecard/player/playerTpl.html',
+      controller : 'playerCtrl',
+      controllerAs : 'player'
     })
   // setup an abstract state for the tabs directive
     .state('tab', {

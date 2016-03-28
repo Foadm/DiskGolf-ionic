@@ -7,7 +7,6 @@ angular.module('starter')
         NumberOfPlayers : 0
       },
       playersSetup : {
-        playerName : ''
       }
     };
     return {

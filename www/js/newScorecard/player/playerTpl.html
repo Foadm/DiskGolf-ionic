@@ -1,0 +1,15 @@
+<ion-view view-title="New Scorecard">
+  <ion-content class="padding">
+    <h1>players</h1>
+    <form class="" name="courseInfo" ng-submit="player.createPlayers()" novalidate>
+      <div class="list">
+        <label ng-repeat="player in player.number" class="item item-input">
+          <input type="text" name="player{{$index + 1}}" placeholder="player {{$index + 1}}" ng-model = "player.name" required>
+        </label>
+        <div class="padding">
+          <button type="submit" class="button button-block button-positive" ng-disabled="courseInfo.$invalid" >Next</button>
+        </div>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

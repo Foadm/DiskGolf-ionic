@@ -1,16 +1,16 @@
 
 <ion-view view-title="New Scorecard">
   <ion-content class="padding">
-    <form class="" name="courseInfo" ng-submit="newScorecard.createNewCourse()" novalidate>
+    <form class="" name="courseInfo" ng-submit="course.createNewCourse()" ui-sref="scoreCard.playerSetup" novalidate>
       <div class="list">
         <label class="item item-input">
-          <input type="text" name="courseName" placeholder="Course name" ng-model="newScorecard.courseName" required>
+          <input type="text" name="courseName" placeholder="Course name" ng-model="course.courseName" required>
         </label>
         <label class="item item-input">
-          <input type="number" name="holes" placeholder="number of holes" ng-model="newScorecard.numberOfHoles" required>
+          <input type="number" name="holes" placeholder="number of holes" ng-model="course.numberOfHoles" required>
         </label>
         <label class="item item-input">
-          <input type="number" name="playerNumber" placeholder="number of players" ng-model="newScorecard.numberOfPlayers" required>
+          <input type="number" name="playerNumber" placeholder="number of players" ng-model="course.numberOfPlayers" required>
         </label>
         <div class="padding">
           <button type="submit" class="button button-block button-positive" ng-disabled="courseInfo.$invalid" >Next</button>
