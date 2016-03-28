@@ -43,7 +43,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
     .state('scoreCard.courseSetup',{
       url: '/course-setup',
-      templateUrl: 'js/newScorecard/newScorecardTpl.html',
+      templateUrl: 'js/newScorecard/course/courseTpl.html',
       controller : 'newScorecardCtrl',
       controllerAs : 'newScorecard'
     })
