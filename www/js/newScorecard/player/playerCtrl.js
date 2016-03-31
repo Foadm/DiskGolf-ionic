@@ -1,9 +1,10 @@
 
 angular.module('starter')
-  .controller('playerCtrl', ['newScorecardSrv', function(newScorecardSrv){
+  .controller('playerCtrl', ['newScorecardSrv','$state', function(newScorecardSrv,$state){
     var player = this;
     player.number = newScorecardSrv.scoreCardModel.playersSetup;
+    var firstHole = newScorecardSrv.scoreCardModel.currentHole;
     player.createPlayers = function() {
-      console.log(newScorecardSrv.scoreCardModel);
+      $state.go('scoreCard.hole', {hole : firstHole});
     }
   }]);
