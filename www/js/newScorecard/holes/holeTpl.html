@@ -1,8 +1,23 @@
 
 <ion-view view-title="Hole 1">
   <ion-content class="padding">
-    <button ng-click="currentHole.nextHole()">next</button>
+    <button ng-click="currentHole.nextHole()" ng-show="currentHole.hole < currentHole.numberOfHoles">next</button>
+    <button ng-click="currentHole.previousHole()" ng-show="currentHole.hole > 1">previous</button>
     <h1>hole{{currentHole.hole}}</h1>
-
+    <form class="" name="scoreForm" ng-submit="currentHole.submitScore()" novalidate>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Par</span>
+          <input type="number" placeholder="Par" ng-model="currentHole.pars['hole'+ currentHole.hole]" required>
+        </label>
+        <label ng-repeat="player in currentHole.players" class="item item-input">
+          <span class="input-label">{{player.name}}</span>
+          <input type="number" placeholder="Score" ng-model = "player.score['hole'+ currentHole.hole]" required>
+        </label>
+        <div class="padding">
+          <button type="submit" class="button button-block button-positive" ng-disabled="scoreForm.$invalid" >Next</button>
+        </div>
+      </div>
+    </form>
   </ion-content>
 </ion-view>

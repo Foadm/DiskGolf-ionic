@@ -8,15 +8,23 @@ angular.module('starter')
       },
       playersSetup : {
       },
-      currentHole : 1,
+      pars :{},
+      currentHole : 1
+    };
+    var holeIncrement = {
       nextHole : function(){
-        if(this.currentHole < this.courseSetup.NumberOfHoles){
-          this.currentHole = this.currentHole +1;
+        if(scoreCardModel.currentHole < scoreCardModel.courseSetup.NumberOfHoles){
+          scoreCardModel.currentHole = scoreCardModel.currentHole +1;
+        }
+      },
+      previousHole : function(){
+        if(scoreCardModel.currentHole > 1){
+          scoreCardModel.currentHole = scoreCardModel.currentHole - 1;
         }
       }
     };
-
     return {
-      scoreCardModel : scoreCardModel
+      scoreCardModel : scoreCardModel,
+      holeIncrement : holeIncrement
     }
   });

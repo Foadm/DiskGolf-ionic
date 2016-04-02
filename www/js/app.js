@@ -53,24 +53,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       controller : 'playerCtrl',
       controllerAs : 'player'
     })
-    .state('scoreCard.scoring', {
-      url :'/scoring',
-      templateUrl : 'js/newScorecard/scoring/scoringTpl.html',
-      controller : 'scoringCtrl',
-      controllerAs : 'scoring'
-    })
     .state('scoreCard.hole', {
       url : '/:hole',
       templateUrl : 'js/newScorecard/holes/holeTpl.html',
       controller : 'holeCtrl',
       controllerAs : 'currentHole'
-    })
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+    });
 
 
   // if none of the above states are matched, use this as the fallback
