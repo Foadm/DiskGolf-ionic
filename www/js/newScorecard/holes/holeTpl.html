@@ -3,6 +3,7 @@
   <ion-content class="padding">
     <button ng-click="currentHole.nextHole()" ng-show="currentHole.hole < currentHole.numberOfHoles">next</button>
     <button ng-click="currentHole.previousHole()" ng-show="currentHole.hole > 1">previous</button>
+    <button ui-sref="scoreCard.overall">overall score</button>
     <h1>hole{{currentHole.hole}}</h1>
     <form class="" name="scoreForm" ng-submit="currentHole.submitScore()" novalidate>
       <div class="list">

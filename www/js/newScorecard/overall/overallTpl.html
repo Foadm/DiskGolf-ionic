@@ -1,0 +1,17 @@
+<ion-view view-title="Hole 1">
+  <ion-content class="padding">
+    <h1>overview</h1>
+    <div class="row">
+      <div class="col">
+        <span>Holes</span>
+        <div class="col" ng-repeat="holes in overall.numberOfHoles">
+          <span>Hole {{$index + 1}}</span>
+        </div>
+      </div>
+      <div class="col" ng-repeat="player in overall.playernames">
+        <span>{{player.name}}</span>
+        <div class="col" ng-repeat="score in player.score">{{score}}</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

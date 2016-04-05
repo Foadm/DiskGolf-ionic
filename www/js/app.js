@@ -58,6 +58,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl : 'js/newScorecard/holes/holeTpl.html',
       controller : 'holeCtrl',
       controllerAs : 'currentHole'
+    })
+    .state('scoreCard.overall', {
+      url : '/overall',
+      templateUrl : 'js/newScorecard/overall/overallTpl.html',
+      controller : 'overallCtrl',
+      controllerAs : 'overall'
     });
 
 
