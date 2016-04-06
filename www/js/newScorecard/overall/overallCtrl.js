@@ -3,4 +3,4 @@ angular.module('starter')
     var overall = this;
     overall.playernames  = newScorecardSrv.scoreCardModel.playersSetup;
     overall.numberOfHoles = newScorecardSrv.scoreCardModel.playersSetup.player1.score;
-}]);
+  }]);

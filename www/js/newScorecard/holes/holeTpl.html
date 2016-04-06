@@ -13,7 +13,7 @@
         </label>
         <label ng-repeat="player in currentHole.players" class="item item-input">
           <span class="input-label">{{player.name}}</span>
-          <input type="number" placeholder="Score" ng-model = "player.score['hole'+ currentHole.hole]" required>
+          <input type="number" placeholder="Score" ng-model = "player.score['hole'+ currentHole.hole][0]" required>
         </label>
         <div class="padding">
           <button type="submit" class="button button-block button-positive" ng-disabled="scoreForm.$invalid" >Next</button>

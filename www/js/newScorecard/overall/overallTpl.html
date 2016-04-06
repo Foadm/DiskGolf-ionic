@@ -10,7 +10,7 @@
       </div>
       <div class="col" ng-repeat="player in overall.playernames">
         <span>{{player.name}}</span>
-        <div class="col" ng-repeat="score in player.score">{{score}}</div>
+        <div class="col" ng-repeat="score in player.score">{{score[1]}}</div>
       </div>
     </div>
   </ion-content>
