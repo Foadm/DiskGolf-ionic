@@ -1,10 +1,10 @@
 angular.module('starter')
-  .controller('holeCtrl', ['newScorecardSrv', '$state', '$stateParams', function(newScorecardSrv, $state, $stateParams){
+  .controller('holeCtrl', ['newScorecardSrv', '$state', function(newScorecardSrv, $state){
     var currentHole =this;
     currentHole.model = newScorecardSrv.scoreCardModel;
     currentHole.currentHole = newScorecardSrv.scoreCardModel.currentHole;
     currentHole.score = 0;
-    currentHole.numberOfPlayers = newScorecardSrv.scoreCardModel.numberOfPlayers;
+    currentHole.numberOfPlayers = newScorecardSrv.scoreCardModel.courseSetup.NumberOfPlayers;
     currentHole.increment = newScorecardSrv.holeIncrement;
     currentHole.numberOfHoles = newScorecardSrv.scoreCardModel.courseSetup.NumberOfHoles;
     currentHole.pars = newScorecardSrv.scoreCardModel.pars;
@@ -19,7 +19,7 @@ angular.module('starter')
       $state.go('scoreCard.hole', {hole : currentHole.model.currentHole});
     };
     currentHole.submitScore = function(){
-      for(i=1; i <= 3; i++){
+      for(i=1; i <= currentHole.numberOfPlayers; i++){
         var currentScore = currentHole.players['player' + i].score['hole' + currentHole.currentHole];
         var finalScore = currentScore[0] - currentHole.pars['hole' + currentHole.currentHole];
         currentScore.push(finalScore);
